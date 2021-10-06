@@ -1,0 +1,39 @@
+int switchState = 0;
+
+void setup() {
+  //  RED LED <   >GREEN LED
+  // initialize digital pin 13, 12, 11, 10, 9, 8 as an output.
+  pinMode(13, OUTPUT);  //1 Green
+  pinMode(12, OUTPUT);  //2 Yellow
+  pinMode(11, OUTPUT);  //3 Orange
+  pinMode(10, OUTPUT);  //4 Red1
+  pinMode(9, OUTPUT);   //5 Red2
+  pinMode(8, OUTPUT);   //6 Red3
+  pinMode(7,INPUT);
+
+}
+
+// the loop function runs over and over again forever
+void loop() {
+  switchState = digitalRead(7);
+  if (switchState == LOW) 
+ // the buton is not pressed
+
+  digitalWrite(13, HIGH);   
+ 
+delay(100); 
+ 
+  digitalWrite(12, HIGH);
+  delay(100);
+  //LED Alternate sides
+  digitalWrite(11, HIGH);   
+  delay(100);
+  digitalWrite(10, HIGH);   
+  delay(500);
+  digitalWrite(9, HIGH);
+  delay(500);
+  digitalWrite(8, HIGH);   
+  delay(500);
+  
+
+}
